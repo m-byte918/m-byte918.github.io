@@ -1,0 +1,13 @@
+.flexbox {
+    padding-top: 40px;
+}
+.flexbox > .box {
+    width: 25%;
+    height: 150px;
+    margin: 4px 40px;
+}
+.box > p {
+    width: 90%;
+    margin: auto;
+    color: #949598;
+}

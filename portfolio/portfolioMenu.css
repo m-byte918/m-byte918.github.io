@@ -1,0 +1,12 @@
+.centeredHeading9 {
+    color: white;
+    text-align: center;
+    padding-top: 9vh;
+}
+.flexbox {
+    padding-top: 40px;
+}
+.flexbox > .box {
+    width: 25%;
+    margin: 4px 40px;
+}

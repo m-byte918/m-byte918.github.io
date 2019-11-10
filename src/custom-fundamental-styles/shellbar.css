@@ -1,0 +1,552 @@
+/*
+This stylesheet lets you change the look of Shellbar components
+I moved all of the basic customization options towards the top of
+this file to make it easier to access them
+*/
+
+
+
+/* --- CUSTOM STYLING SECTION --- */
+
+.fd-shellbar {
+	/* Background color of the shellbar */
+	background-color: #1a1d1f;
+}
+
+
+
+/* --- FUNDAMENTAL DEFAULT STYLING SECTION --- */
+
+ .fd-product-menu {
+	font-size: 14px;
+	line-height: 1.42857;
+	color: #32363a;
+	color: var(--fd-color-text-1, #32363a);
+	font-family: "72", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	padding: 0 8px 0 0;
+	text-overflow: ellipsis;
+	min-width: 0
+}
+
+.fd-product-menu:after,
+.fd-product-menu:before {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+	font-size: inherit
+}
+
+@media (min-width:320px) {
+	.fd-product-menu {
+		max-width: 60%
+	}
+}
+
+@media (min-width:600px) {
+	.fd-product-menu {
+		max-width: 60%
+	}
+}
+
+.fd-product-menu[dir=rtl],
+[dir=rtl] .fd-product-menu {
+	padding: 0 0 0 8px
+}
+
+.fd-product-menu__control {
+	background-color: #d1e8ff;
+	background-color: var(--fd-color-shell-2, #d1e8ff);
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	outline: 0;
+	border: 0;
+	text-decoration: none;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	vertical-align: middle;
+	white-space: nowrap;
+	background-color: transparent;
+	border-radius: 4px;
+	height: 36px;
+	height: var(--fd-forms-height, 36px);
+	padding-right: 20px;
+	padding-left: 0
+}
+
+.fd-product-menu__control[dir=rtl],
+[dir=rtl] .fd-product-menu__control {
+	padding-right: 0;
+	padding-left: 20px
+}
+
+.fd-product-menu__control:after {
+	height: 0;
+	width: 0;
+	border-style: solid;
+	border-width: 5px 5px 0 5px;
+	border-top-color: #d1e8ff;
+	border-top-color: var(--fd-color-shell-2, #d1e8ff);
+	border-left-color: transparent;
+	border-right-color: transparent;
+	content: "";
+	position: absolute;
+	top: calc(50% - 2.5px);
+	margin-left: 8px;
+	margin-right: 8px
+}
+
+
+/*!
+ .fd-search-input
+ */
+
+.fd-search-input {
+	display: inline-block;
+	z-index: 1;
+	-webkit-transition: all 125ms;
+	transition: all 125ms
+}
+
+.fd-search-input[dir=rtl],
+[dir=rtl] .fd-search-input {
+	right: auto;
+	left: 0
+}
+
+.fd-search-input .fd-input-group__addon--button {
+	border-color: transparent;
+	background-color: #354a5f;
+	background-color: var(--fd-color-shell-1, #354a5f);
+	position: relative
+}
+
+.fd-search-input .fd-input-group__addon--button[aria-expanded=true] {
+	z-index: 2
+}
+
+.fd-search-input .fd-input-group__addon--button[aria-expanded=true]:focus {
+	-webkit-box-shadow: none;
+	box-shadow: none
+}
+
+.fd-search-input .fd-input {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #d1e8ff;
+	border-color: var(--fd-color-shell-2, #d1e8ff);
+	background-color: #354a5f;
+	background-color: var(--fd-color-shell-1, #354a5f);
+	color: #d1e8ff;
+	color: var(--fd-color-shell-2, #d1e8ff);
+	-webkit-transition: border-color 125ms;
+	transition: border-color 125ms;
+	padding-left: 12px;
+	padding-right: 12px
+}
+
+.fd-search-input .fd-input:focus {
+	-webkit-box-shadow: none;
+	box-shadow: none
+}
+
+.fd-search-input .fd-input.is-hidden,
+.fd-search-input .fd-input[aria-hidden=true] {
+	opacity: 0;
+	visibility: hidden
+}
+
+.fd-shellbar {
+	font-size: 14px;
+	line-height: 1.42857;
+	color: #32363a;
+	color: var(--fd-color-text-1, #32363a);
+	font-family: "72", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	height: 48px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	color: #fff;
+	color: var(--fd-color-text-5, #fff);
+	position: relative;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between
+}
+
+.fd-shellbar:after,
+.fd-shellbar:before {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+	font-size: inherit
+}
+
+@media (min-width:320px) {
+	.fd-shellbar {
+		padding: 4px 8px
+	}
+}
+
+@media (min-width:600px) {
+	.fd-shellbar {
+		padding: 4px 16px
+	}
+}
+
+@media (min-width:1024px) {
+	.fd-shellbar {
+		padding: 4px 32px
+	}
+}
+
+@media (min-width:1440px) {
+	.fd-shellbar {
+		padding: 4px 32px
+	}
+}
+
+@media (min-width:1920px) {
+	.fd-shellbar {
+		padding: 4px 32px
+	}
+}
+
+.fd-shellbar__group {
+	font-size: 14px;
+	line-height: 1.42857;
+	color: #32363a;
+	color: var(--fd-color-text-1, #32363a);
+	font-family: "72", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1
+}
+
+.fd-shellbar__group:after,
+.fd-shellbar__group:before {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+	font-size: inherit
+}
+
+.fd-shellbar__group--product {
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	-webkit-box-ordinal-group: 2;
+	-ms-flex-order: 1;
+	order: 1
+}
+
+.fd-shellbar__group--copilot {
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-ordinal-group: 3;
+	-ms-flex-order: 2;
+	order: 2
+}
+
+.fd-shellbar__group--actions {
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+	-webkit-box-ordinal-group: 4;
+	-ms-flex-order: 3;
+	order: 3
+}
+
+.fd-shellbar__button {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	outline: 0;
+	border: 0;
+	text-decoration: none;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	vertical-align: middle;
+	white-space: nowrap;
+	background-color: transparent;
+	border-radius: 4px;
+	color: #d1e8ff;
+	color: var(--fd-color-shell-2, #d1e8ff);
+	border-color: transparent
+}
+
+.fd-shellbar__button:before {
+	font-size: 16px;
+	line-height: 1
+}
+
+.fd-shellbar__button:after {
+	font-size: 16px;
+	line-height: 1
+}
+
+.fd-shellbar__button.is-active,
+.fd-shellbar__button.is-pressed,
+.fd-shellbar__button.is-selected,
+.fd-shellbar__button:active,
+.fd-shellbar__button[aria-pressed=true],
+.fd-shellbar__button[aria-selected=true] {
+	background-color: #2a3341
+}
+
+.fd-shellbar__button .is-hover,
+.fd-shellbar__button:hover {
+	background-color: #323d4d
+}
+
+.fd-shellbar__button .is-hover.is-disabled,
+.fd-shellbar__button .is-hover:disabled,
+.fd-shellbar__button .is-hover[aria-disabled=true],
+.fd-shellbar__button:hover.is-disabled,
+.fd-shellbar__button:hover:disabled,
+.fd-shellbar__button:hover[aria-disabled=true] {
+	background-color: transparent
+}
+
+.fd-shellbar__subtitle,
+.fd-shellbar__title {
+	font-size: 14px;
+	line-height: 1.42857;
+	color: #32363a;
+	color: var(--fd-color-text-1, #32363a);
+	font-family: "72", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+	-webkit-font-smoothing: antialiased;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font-size: 16px;
+	line-height: 1.25;
+	font-weight: 400;
+	font-weight: 700;
+	line-height: 1;
+	color: #fff;
+	color: var(--fd-color-text-5, #fff);
+	white-space: nowrap;
+	overflow: hidden;
+	max-width: 100%;
+	text-overflow: ellipsis;
+	display: none
+}
+
+.fd-shellbar__subtitle:after,
+.fd-shellbar__subtitle:before,
+.fd-shellbar__title:after,
+.fd-shellbar__title:before {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+	font-size: inherit
+}
+
+@media (min-width:600px) {
+	.fd-shellbar__subtitle,
+	.fd-shellbar__title {
+		display: inline-block
+	}
+}
+
+.fd-shellbar__subtitle {
+	font-size: 12px;
+	line-height: 1.33333;
+	font-weight: 400;
+	padding: 0 16px
+}
+
+@media (min-width:320px) {
+	.fd-shellbar__subtitle {
+		display: none
+	}
+}
+
+@media (min-width:600px) {
+	.fd-shellbar__subtitle {
+		display: none
+	}
+}
+
+@media (min-width:1024px) {
+	.fd-shellbar__subtitle {
+		display: inline-block
+	}
+}
+
+.fd-shellbar__logo,
+.fd-shellbar__product,
+.fd-shellbar__subtitle {
+	display: inline-block;
+	vertical-align: middle
+}
+
+.fd-shellbar__logo {
+	font-size: 14px;
+	line-height: 1.42857;
+	color: #32363a;
+	color: var(--fd-color-text-1, #32363a);
+	font-family: "72", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	vertical-align: middle;
+	max-height: 40px;
+	background-repeat: no-repeat;
+	background-size: contain
+}
+
+.fd-shellbar__logo:after,
+.fd-shellbar__logo:before {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+	font-size: inherit
+}
+
+@media (min-width:600px) {
+	.fd-shellbar__logo {
+		display: inline-block;
+		margin-right: 8px
+	}
+	.fd-shellbar__logo[dir=rtl],
+	[dir=rtl] .fd-shellbar__logo {
+		margin-right: 0;
+		margin-left: 8px
+	}
+}
+
+.fd-shellbar__logo>* {
+	line-height: 0;
+	max-height: 40px;
+	width: auto;
+	display: block
+}
+
+.fd-shellbar__logo--image-replaced {
+	background-image: url(data:image/svg+xml;base64,PHN2ZyBkYXRhLW5hbWU9IkxheWVyIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDQxMi4zOCAyMDQiPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9IjIwNi4xOSIgeDI9IjIwNi4xOSIgeTI9IjIwNCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwYjhmMSIvPjxzdG9wIG9mZnNldD0iLjAyIiBzdG9wLWNvbG9yPSIjMDFiNmYwIi8+PHN0b3Agb2Zmc2V0PSIuMzEiIHN0b3AtY29sb3I9IiMwZDkwZDkiLz48c3RvcCBvZmZzZXQ9Ii41OCIgc3RvcC1jb2xvcj0iIzE3NzVjOCIvPjxzdG9wIG9mZnNldD0iLjgyIiBzdG9wLWNvbG9yPSIjMWM2NWJmIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMWU1ZmJiIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHBhdGggZD0iTTAgMjA0aDIwOC40MUw0MTIuMzggMEgwdjIwNCIgZmlsbD0idXJsKCNhKSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PHBhdGggZD0iTTI0NC43MyAzOC4zNmgtNDAuNnY5Ni41MmwtMzUuNDYtOTYuNTVoLTM1LjE2bC0zMC4yNyA4MC43MkMxMDAgOTguNyA3OSA5MS42NyA2Mi40IDg2LjQgNTEuNDYgODIuODkgMzkuODUgNzcuNzIgNDAgNzJjLjA5LTQuNjggNi4yMy05IDE4LjM4LTguMzggOC4xNy40MyAxNS4zNyAxLjA5IDI5LjcxIDhsMTQuMS0yNC41NUM4OS4wNiA0MC40MiA3MSAzNi4yMSA1Ni4xNyAzNi4xOWgtLjA5Yy0xNy4yOCAwLTMxLjY4IDUuNi00MC42IDE0LjgzQTM0LjIzIDM0LjIzIDAgMDA1Ljc3IDc0LjdDNS41NCA4Ny4xNSAxMC4xMSA5NiAxOS43MSAxMDNjOC4xIDUuOTQgMTguNDYgOS43OSAyNy42IDEyLjYyIDExLjI3IDMuNDkgMjAuNDcgNi41MyAyMC4zNiAxM0E5LjU3IDkuNTcgMCAwMTY1IDEzNWMtMi44MSAyLjktNy4xMyA0LTEzLjA5IDQuMS0xMS40OS4yNC0yMC0xLjU2LTMzLjYxLTkuNTlMNS43NyAxNTQuNDJhOTMuNzcgOTMuNzcgMCAwMDQ2IDEyLjIyaDIuMTFjMTQuMjQtLjI1IDI1Ljc0LTQuMzEgMzQuOTItMTEuNzEuNTMtLjQxIDEtLjg0IDEuNDktMS4yOGwtNC4xMiAxMC44NUgxMjNsNi4xOS0xOC44MmE2Ny40NiA2Ny40NiAwIDAwMjEuNjggMy40MyA2OC4zMyA2OC4zMyAwIDAwMjEuMTYtMy4yNWw2IDE4LjY0aDYwLjE0di0zOWgxMy4xMWMzMS43MSAwIDUwLjQ2LTE2LjE1IDUwLjQ2LTQzLjIgMC0zMC4xMS0xOC4yMi00My45NC01Ny4wMS00My45NHpNMTUwLjkxIDEyMWEzNi45MyAzNi45MyAwIDAxLTEzLTIuMjhsMTIuODctNDAuNTloLjIybDEyLjY1IDQwLjcxYTM4LjUgMzguNSAwIDAxLTEyLjc0IDIuMTZ6bTk2LjItMjMuMzNoLTguOTRWNjQuOTFoOC45NGMxMS45MyAwIDIxLjQ0IDQgMjEuNDQgMTYuMTQgMCAxMi42LTkuNTEgMTYuNTctMjEuNDQgMTYuNTciIGZpbGw9IiNmZmYiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==);
+	width: 48px;
+	height: 24px
+}
+
+.fd-shellbar__action {
+	font-size: 14px;
+	line-height: 1.42857;
+	color: #32363a;
+	color: var(--fd-color-text-1, #32363a);
+	font-family: "72", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	padding-right: 0;
+	padding-left: 12px
+}
+
+.fd-shellbar__action:after,
+.fd-shellbar__action:before {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+	font-size: inherit
+}
+
+.fd-shellbar__action[dir=rtl],
+[dir=rtl] .fd-shellbar__action {
+	padding-right: 12px;
+	padding-left: 0
+}
+
+.fd-shellbar__action>* {
+	vertical-align: middle
+}
+
+@media (min-width:320px) {
+	.fd-shellbar__action--mobile {
+		display: inline-block
+	}
+}
+
+@media (min-width:600px) {
+	.fd-shellbar__action--mobile {
+		display: inline-block
+	}
+}
+
+@media (min-width:1024px) {
+	.fd-shellbar__action--mobile {
+		display: none
+	}
+}
+
+@media (min-width:320px) {
+	.fd-shellbar__action--desktop {
+		display: none
+	}
+}
+
+@media (min-width:600px) {
+	.fd-shellbar__action--desktop {
+		display: none
+	}
+}
+
+@media (min-width:1024px) {
+	.fd-shellbar__action--desktop {
+		display: inline-block
+	}
+}

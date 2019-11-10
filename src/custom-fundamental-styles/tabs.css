@@ -1,0 +1,172 @@
+/*
+This stylesheet lets you change the look of Tab components
+I moved all of the basic customization options towards the top of
+this file to make it easier to access them
+*/
+
+.fd-tabs {
+	--fd-tabs-border-color: var(--fd-color-neutral-3, #d9d9d9);
+	--fd-tabs-background-color: var(--fd-color-background-2, #fff);
+	--fd-tabs-link-color: var(--fd-color-text-2, #51555a);
+	--fd-tabs-link-border-color: var(--fd-color-action-1);
+	font-size: 14px;
+	line-height: 1.42857;
+	color: #32363a;
+	color: var(--fd-color-text-1, #32363a);
+	font-family: "72", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	background-color: #fff;
+	background-color: var(--fd-tabs-background-color, #fff);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	padding-left: 0;
+	margin-bottom: 12px;
+	list-style: none;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #fff;
+	border-bottom-color: var(--fd-tabs-background-color, #fff)
+}
+
+.fd-tabs:after,
+.fd-tabs:before {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+	font-size: inherit
+}
+
+.fd-tabs__item {
+	font-size: 14px;
+	line-height: 1.42857;
+	color: #32363a;
+	color: var(--fd-color-text-1, #32363a);
+	font-family: "72", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	padding: 0 16px
+}
+
+.fd-tabs__item:after,
+.fd-tabs__item:before {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+	font-size: inherit
+}
+
+.fd-tabs__link {
+	color: #32363a;
+	color: var(--fd-color-text-1, #32363a);
+	font-family: "72", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+	-webkit-font-smoothing: antialiased;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	display: block;
+	position: relative;
+	padding: 16px 0;
+	text-decoration: none;
+	font-size: 14px;
+	line-height: 1.42857;
+	font-weight: 400;
+	cursor: pointer;
+	color: #51555a;
+	color: var(--fd-tabs-link-color, #51555a)
+}
+
+.fd-tabs__link:after,
+.fd-tabs__link:before {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+	font-size: inherit
+}
+
+.fd-tabs__link:link {
+	color: #51555a;
+	color: var(--fd-tabs-link-color, #51555a)
+}
+
+.fd-tabs__link:after {
+	-webkit-transition: all 125ms ease-in;
+	transition: all 125ms ease-in;
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: inline-block;
+	height: 3px;
+	width: 100%;
+	background-color: transparent;
+	border-radius: 4px 4px 0 0
+}
+
+.fd-tabs__link .is-hover,
+.fd-tabs__link:hover {
+	color: #e22222;
+	color: var(--fd-color-action-selected, #e22222)
+}
+
+.fd-tabs__link.is-selected,
+.fd-tabs__link[aria-selected=true] {
+	color: #c5281f;
+	color: var(--fd-color-action-1, #c5281f)
+}
+
+.fd-tabs__link.is-selected:after,
+.fd-tabs__link[aria-selected=true]:after {
+	background-color: #c5281f;
+	background-color: var(--fd-tabs-link-border-color, #c5281f)
+}
+
+.fd-tabs__link.is-disabled,
+.fd-tabs__link:disabled,
+.fd-tabs__link[aria-disabled=true] {
+	color: var(--fd-color-action-disabled, rgba(10, 110, 209, .4));
+	cursor: not-allowed
+}
+
+.fd-tabs__panel {
+	font-size: 14px;
+	line-height: 1.42857;
+	color: #32363a;
+	color: var(--fd-color-text-1, #32363a);
+	font-family: "72", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	border: 0
+}
+
+.fd-tabs__panel:after,
+.fd-tabs__panel:before {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+	font-size: inherit
+}
+
+.fd-tabs__panel[aria-expanded=false] {
+	display: none
+}
+
+.fd-tabs__panel.is-expanded,
+.fd-tabs__panel[aria-expanded=true] {
+	display: block
+}

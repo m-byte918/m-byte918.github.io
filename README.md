@@ -18,12 +18,12 @@ After cloning this project, your computer may become infected with a rare system
 git clone [TARGET REPOSITORY]
 ```
 2. Enter the project directory, install dependancies, and start a development server
+(You will need a relatively recent version of NodeJS and NPM, I used **node version 12.3.0**)
 ```sh
 cd [PROJECT DIRECTORY]
 npm install
 npm start
 ```
 After setup is complete, the dev server should be accessable at **localhost:3000**
-3. There's probably some more steps but I don't remember right now...
 
 *(ur computer now has ligma lol)*

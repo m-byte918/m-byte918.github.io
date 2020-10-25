@@ -1,8 +1,0 @@
-.flexbox {
-    padding-top: 40px;
-}
-.flexbox > .box {
-    width: 25%;
-    height: 25%;
-    margin: 4px 40px;
-}

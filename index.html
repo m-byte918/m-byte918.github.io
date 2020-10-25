@@ -1,109 +1,144 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
     <head>
-        <link href="main.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.5.1.js" 
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+            crossorigin="anonymous">
+        </script>
+        <script src="index.js"></script>
+        <link href="index.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
-        <title>About Me</title>
+        <title>m-byte918.github.io</title>
     </head>
     <body>
-        <h1 class="centeredHeading25">Hello, my name is Christian Rodriguez.</h1>
-        <br>
-        <div id="mainMenu" class="flexbox">
-            <a class="box" href="projects/projectMenu.html"><h1>Projects</h1></a>
-            <a class="box" href="portfolio/portfolioMenu.html"><h1>Portfolio</h1></a>
-            <a class="box" href="#"><h1>Schoolwork</h1></a>
-        </div>
-        <div>
-            <div id="centerLinkContainer" class="centeredHeading50" style="text-align:center">
-                <a id="centerLink" href="portfolio/portfolioMenu.html"><h1>About me</h1></a>
-            </div>
-            <div class="flexbox">
-                <a class="card box" href="#" target="_blank" style="width:24vw">
-                    <img class="cardPic" alt="[Picture of myself]" src="portfolio/graphics/aboutme/me.jpg" style="width:24vw">
-                    <div class="cardDescContainer" style="height:31vh">
-                        <p class="cardDesc">
-                            Hello! My name is Christian Rodriguez. I am an 18 year old freshman at the Pennsylvania College of 
-                            Technology in Williamsport, PA, and I am currently majoring in Game and Simulation programming. My studies 
-                            focus on the skills necessary to develop and implement interactive and engaging experiences, such as 
-                            computer games and simulations.
-                        </p>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div id="myProjects">
-            <div id="centerLinkContainer" class="centeredHeading25" style="text-align:center">
-                <a id="centerLink" href="projects/projectMenu.html"><h1>My Projects</h1></a>
-            </div>
-            <div class="flexbox">
-                <a class="card box" href="https://github.com/m-byte918/AgarOSS" target="_blank" style="border-radius:6px">
-                    <img class="cardPic" alt="[Picture of MultiOgar]" src="projects/graphics/multiogar.png">
-                    <div class="cardDescContainer">
-                        <div class="cardDesc">
-                            <h2>AgarOSS</h2> 
-                            <p>An Agar.io open source server implementation written in C++</p>
-                        </div>
-                    </div>
-                </a>
-                <a class="card box" href="https://github.com/m-byte918/QuadTree-Cpp" target="_blank" style="border-radius:6px">
-                    <img class="cardPic" alt="[Picture of my QuadTree demo]" src="projects/graphics/qtdemo.png">
-                    <div class="cardDescContainer">
-                        <div class="cardDesc">
-                            <h2>QuadTree-Cpp</h2> 
-                            <p>Simple QuadTree written in C++ with SFML demo</p>
-                        </div>
-                    </div>
-                </a>
-                <a class="card box" href="https://github.com/m-byte918/SpeculativeContacts" target="_blank" style="border-radius:6px">
-                    <img class="cardPic" alt="[Picture of my Speculative Contacts demo]" src="projects/graphics/contactsdemo.png">
-                    <div class="cardDescContainer">
-                        <div class="cardDesc">
-                            <h2>Speculative Contacts</h2> 
-                            <p>Javascript demo of speculative contacts used to solve basic circle-circle collisions</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div id="education">
-            <div id="centerLinkContainer" class="centeredHeading25" style="text-align:center">
-                <a id="centerLink" href="#"><h1>Education</h1></a>
-            </div>
-            <div class="flexbox">
-                <a class="card box" href="https://www.pct.edu/" target="_blank" style="border-radius:6px">
-                    <img class="cardPic" alt="[Picture of Pennsylvania College of Technology]" src="schoolwork/graphics/pct/pctfront.jpg">
-                    <div class="cardDescContainer" style="height:24vh">
-                        <div class="cardDesc">
-                            <h2>Pennsylvania College of Technology</h2> 
-                            <p>Majoring in Game and Simulation Programming, Minoring in Networking and Programming</p>
-                        </div>
-                    </div>
-                </a>
-                <a class="card box" href="https://www.cciu.org/tchspickering" target="_blank" style="border-radius:6px">
-                    <img class="cardPic" alt="[Picture of TCHS Pickering Campus]" src="schoolwork/graphics/tchs/tchsfront.jpg">
-                    <div class="cardDescContainer" style="height:17vh">
-                        <div class="cardDesc">
-                            <h2>TCHS Pickering Campus</h2> 
-                            <p>Studied in the Electronics & Avionics CTE Program for three years</p>
-                        </div>
-                    </div>
-                </a>
-                <a class="card box" href="https://www.pottstownschools.org/pottstownhighschool_home.aspx" target="_blank" style="border-radius:6px">
-                    <img class="cardPic" alt="[Picture of Pottstown High School]" src="schoolwork/graphics/phs/phsfront.jpg">
-                    <div class="cardDescContainer" style="height:17vh">
-                        <div class="cardDesc">
-                            <h2>Pottstown High School</h2> 
-                            <p>Reading, Writing, Math, Science, Government, and Psychology</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div id="author">
-            <a class="greyText" href="https://github.com/m-byte918" target="_blank" style="text-decoration:none">
-                Website by Christian Rodriguez (@m-byte918)
+        <div id="navbar">
+            <a title="Github profile" href="https://github.com/m-byte918">
+                <img id="logo" src="img/logo_transparent1.png" alt="[&lt#&gt Christian Rodriguez]"></img>
             </a>
+            <a title="Search this site" href="search/index.html">
+                <img id="srch" src="img/search.png" alt="[Search...]"></img>
+            </a>
+            <div id="pages">
+                <div class="dropdown">
+                    <a class="location" title="My projects with demos" href="#">Projects</a>
+                    <div class="dropdown-content">
+                        <a href="#sims" title="Physics Simulations">Physics Simulations</a>
+                        <a href="#games" title="Games I created/contributed to">Video Games</a>
+                        <a href="#utils" title="Useful Utilities">Useful Utilities</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a title="Programming tutorials, tips/tricks, and flowcharts" href="#">Programming</a>
+                    <div class="dropdown-content">
+                        <a href="#" title="Programming tutorials">Tutorials</a>
+                        <a href="#" title="Programming tips and tricks">Tips/Tricks</a>
+                        <a href="#" title="Useful flowcharts for programmers">Flowcharts</a>
+                    </div>
+                </div>
+                <a title="Blogs" href="#">Blog</a>
+                <div class="dropdown">
+                    <a title="My story, education, achievements and skills" href="#">About me</a>
+                    <div class="dropdown-content">
+                        <a href="#" title="Autobiography">Who I am</a>
+                        <a href="#" title="Where I got my education">Education</a>
+                        <a href="#" title="My skills and achievements">Achievements</a>
+                    </div>
+                </div>
+                <a title="Where to contact me" href="#">Contact</a>
+            </div>
         </div>
+        <area id="sims">
+        <div class="card-section">
+            <h1>Physics Simulations</h1>
+            <br>
+            <div class="card-holder">
+                <a class="card" href="https://github.com/m-byte918/MultiOgarII">
+                    <img alt="[Image of MultiOgar]" src="img/multiogar.png"></img>
+                    <div class="card-description">
+                        <h2>MultiOgarII</h2>
+                        <p>An Agar.io open source server implementation written with Node.js</p>
+                    </div>
+                </a>
+                <a class="card" href="https://github.com/m-byte918/QuadTree-Cpp">
+                    <img alt="[Image of QuadTree]" src="img/qtdemo.png"></img>
+                    <div class="card-description">
+                        <h2>QuadTree-Cpp</h2>
+                        <p>Simple Recursive QuadTree written in C++ with an SFML demo</p>
+                    </div>
+                </a>
+                <a class="card" href="https://github.com/m-byte918/SpeculativeContacts">
+                    <img alt="[Image of Speculative Contacts Demo]" src="img/scdemo.png"></img>
+                    <div class="card-description">
+                        <h2>Speculative Contacts</h2>
+                        <p>Javascript demo of speculative contacts used to solve basic circle-circle collisions</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <br id="games">
+        <div class="card-section">
+            <h1>Video Games</h1>
+            <br>
+            <div class="card-holder">
+                <a class="card" href="https://github.com/m-byte918/Yasuo-The-Exiled">
+                    <img alt="[Image of Yasuo: The Exiled]" src="img/yte_placeholder.png"></img>
+                    <div class="card-description">
+                        <h2>Yasuo: The Exiled</h2>
+                        <p>Source code for the Yasuo: The Exiled game. Made with Unity and C#</p>
+                    </div>
+                </a>
+                <a class="card" href="https://balz.io">
+                    <img alt="[Image of Balz.io]" src="img/balz.png"></img>
+                    <div class="card-description">
+                        <h2>Balz.io</h2>
+                        <p>Backend developer for the Balz.io game. Wrote servers in Javascript using Node.JS</p>
+                    </div>
+                </a>
+                <a class="card" href="https://github.com/m-byte918/Bobs-Fortress-2-Tank-Warfare">
+                    <img alt="[Image of BF2 - Tank Warfare]" src="img/bf2tw.png"></img>
+                    <div class="card-description">
+                        <h2>BF2 - Tank Warfare</h2>
+                        <p>Source code for the Bob's Fortress 2 - Tank Warfare game. Made with GameMaker Studio 2</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <br id="utils">
+        <div class="card-section">
+            <h1>Utilities</h1>
+            <br>
+            <div class="card-holder">
+                <a class="card" href="https://github.com/m-byte918/Logger-Cpp">
+                    <img alt="[Image of Logger-Cpp]" src="img/logger2.png"></img>
+                    <div class="card-description">
+                        <h2>Logger-Cpp</h2>
+                        <p>Simple Logger written in C++</p>
+                    </div>
+                </a>
+                <a class="card" href="https://github.com/m-byte918/PCT-Coursework/blob/master/CIT360/SortingAlgorithms/src/Main.java">
+                    <img alt="[Image of Sorting Algorithms]" src="img/algorithm.png"></img>
+                    <div class="card-description">
+                        <h2>Sorting Algorithms</h2>
+                        <p>Java implementations of selection sort, bubble sort, insertion sort, quick sort, merge sort, and radix sort</p>
+                    </div>
+                </a>
+                <a class="card" href="https://github.com/m-byte918/Binary-Reader-Writer">
+                    <img alt="[Image of Binary Reader/Writer]" src="img/binrw2.png"></img>
+                    <div class="card-description">
+                        <h2>Binary Reader/Writer</h2>
+                        <p>C++ binary reader & writer implementation for reading + writing binary data</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <h1><a href="https://github.com/m-byte918">(And many more here!)</a></h1>
     </body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="author">
+        Website by Christian Rodriguez (@m-byte918)
+    </div>
 </html>

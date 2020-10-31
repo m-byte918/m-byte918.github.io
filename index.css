@@ -1,9 +1,8 @@
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    background-color: #53575e;
+    /*background-color: #53575e;*/
 }
-
 #navbar {
     background-color: #42464c;
     overflow: hidden;

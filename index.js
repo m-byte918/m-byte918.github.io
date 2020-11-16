@@ -1,34 +1,30 @@
 $(document).ready(function() {
 
-    // Dropdown menus
+    /** Dropdown menus **/
+    
     $(".dropdown > a").mouseenter(function() {
-        setDropdownColor($(this), "#35393d");
+        setStyle($(this), "#f52549", "bold");
     });
     $(".dropdown > a").mouseleave(function() {
-        setDropdownColor($(this), "#42464c");
+        setStyle($(this), "#f2f2f2", "normal");
     });
     $(".dropdown-content").mouseenter(function() {
-        setDropdownColor($(this).siblings("a"), "#35393d");
+        setStyle($(this).siblings("a"), "#f52549", "bold");
     });
     $(".dropdown-content").mouseleave(function() {
-        setDropdownColor($(this).siblings("a"), "#42464c");
+        setStyle($(this).siblings("a"), "#f2f2f2", "normal");
     });
-    function setDropdownColor(elem, color) {
-        if (!elem.hasClass("location"))
-            elem.css("background-color", color);
-    }
 
-    // Star background
-    const starColor = "#FFF";
-    const starMinSize = 1;
-    const starMaxSize = 3;
-    const starBBox = {
-        minx: "0vw",
-        miny: "0vh",
-        maxx: "100vw",
-        maxy: "100vh"
-    };
-    // animDelay = size * 50
-    
-    // FORMAT SCROLL BAR
+    $(".dropdown-content").children("a").each(function(index, elem) {
+        $(elem).css("transition-delay", `${index * 0.03}s`);
+    });
+
+    function setStyle(elem, color, fontWeight) {
+        if (elem.hasClass("location"))
+            return;
+        elem.css({
+            color: color,
+            fontWeight: fontWeight
+        });
+    }
 });

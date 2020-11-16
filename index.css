@@ -3,15 +3,16 @@ body {
     margin: 0;
     /*background-color: #53575e;*/
 }
+
 #navbar {
-    background-color: #42464c;
     overflow: hidden;
     height: 70px;
+    z-index: 1;
 }
 
 #logo {
     float: left;
-    margin: 3px 20px auto 10px;
+    margin: 12px 20px auto 12px;
     width: 140px;
     position: absolute;
     z-index: 1;
@@ -19,29 +20,20 @@ body {
 
 #srch {
     float: right;
-    margin: 19px 30px auto auto;
+    margin: 26px 30px auto auto;
     width: 30px;
 }
 
 #pages {
+    margin-top: 9px;
     position: absolute;
     display: flex;
     justify-content: center;
     width: 97%;
     height: 22px;
     font-size: 17px;
-}
-
-#pages > a {
-    color: #f2f2f2;
-    text-decoration: none;
-    min-width: 55px;
-}
-
-.dropdown-content > a {
-    color: #f2f2f2;
-    text-decoration: none;
-    min-width: 55px;
+    z-index: 1;
+    list-style-type: none;
 }
 
 .dropdown > a {
@@ -52,46 +44,66 @@ body {
     display: flex;
 }
 
+area {
+    margin-top: 11px;
+    height: 45px;
+    width: 1px;
+    background-color: white;
+}
+
 .dropdown > a:hover {
-    background-color: #35393d;
+    transform: scale(1.09);
+    transition: transform 0.1s ease-in-out;
 }
 
 #pages > a {
+    color: #f2f2f2;
+    text-decoration: none;
+    min-width: 55px;
     padding: 24px 20px;
     height: inherit;
     text-align: center;
 }
 
 #pages > a:hover {
-    background-color: #35393d;
     cursor: pointer;
+    transform: scale(1.09);
+    transition: transform 0.1s ease-in-out;
+    color: #f52549;
+    font-weight: bold;
 }
 
 #pages .location {
-    background-color: #2a2d30;
+    color: #f52549;
+    font-weight: bold;
+    /*background-color: #2a2d30;*/
 }
 
 .dropdown-content {
-    top: 70px;
-    display: none;
+    top: 60px;
     position: absolute;
-    background-color: #35393d;
     min-width: 180px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     text-align: left;
 }
 
 .dropdown-content a {
-    padding: 12px 16px;
+    color: #f2f2f2;
+    text-decoration: none;
+    padding: 6px 16px;
     display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s linear;
 }
 
 .dropdown-content a:hover {
-    background-color: #2a2d30;
+    color: #f52549;
+    font-weight: bold;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+.dropdown:hover .dropdown-content > a {
+    opacity: 1;
+    visibility: visible;
 }
 
 .card-section > h1 {
@@ -116,6 +128,7 @@ body {
     border-radius: 6px;
     margin-right: 35px;
     box-shadow: 6px 6px 8px black;
+    z-index: 1;
 }
 
 .card:hover {
@@ -167,4 +180,21 @@ h1 > a:hover {
     padding-left: 5px;
     padding-bottom: 5px;
     color: #d3d3d3
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #090a0f;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

@@ -1,7 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    /*background-color: #53575e;*/
+    scroll-behavior: smooth;
 }
 
 #navbar {
@@ -25,7 +25,7 @@ body {
 }
 
 #pages {
-    margin-top: 9px;
+    margin: 9px 0px 0px 22px;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -45,8 +45,8 @@ body {
 }
 
 area {
-    margin-top: 11px;
-    height: 45px;
+    margin-top: 14px;
+    height: 40px;
     width: 1px;
     background-color: white;
 }
@@ -56,34 +56,17 @@ area {
     transition: transform 0.1s ease-in-out;
 }
 
-#pages > a {
-    color: #f2f2f2;
-    text-decoration: none;
-    min-width: 55px;
-    padding: 24px 20px;
-    height: inherit;
-    text-align: center;
-}
-
-#pages > a:hover {
-    cursor: pointer;
-    transform: scale(1.09);
-    transition: transform 0.1s ease-in-out;
-    color: #f52549;
-    font-weight: bold;
-}
-
 #pages .location {
     color: #f52549;
     font-weight: bold;
-    /*background-color: #2a2d30;*/
 }
 
 .dropdown-content {
     top: 60px;
     position: absolute;
-    min-width: 180px;
+    width: max-content;
     text-align: left;
+    height: 0px;
 }
 
 .dropdown-content a {
@@ -93,7 +76,7 @@ area {
     display: block;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0s, opacity 0.3s linear;
+    transition: visibility 0s, opacity 0.3s ease-in;
 }
 
 .dropdown-content a:hover {

@@ -2,12 +2,14 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     scroll-behavior: smooth;
+    background-color: #23272a;
 }
 
 #navbar {
     overflow: hidden;
-    height: 70px;
+    height: 84px;
     z-index: 1;
+    background-color: #2c2f33;
 }
 
 #logo {
@@ -89,73 +91,19 @@ area {
     visibility: visible;
 }
 
-.card-section > h1 {
-    margin-top: 120px;
-    text-align: center;
-    color: white;
-}
-
-.card-holder {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.card {
-    text-decoration: none;
-    width: 22vw;
-    border: 2px solid rgba(0,0,0,.1);
-    transition: all .12s ease-out;
-    border-radius: 6px;
-    margin-right: 35px;
-    box-shadow: 6px 6px 8px black;
-    z-index: 1;
-}
-
-.card:hover {
-    transform: scale(1.03);
-    box-shadow: 5px 5px 6px rgb(27, 27, 27);
-}
-
-.card > img {
-    width: 22vw;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-}
-
-.card-description {
-    color: #f2f2f2;
-    text-align: center;
-    padding: 12px 6px 6px 6px;
-    margin-top: -25px;
-    background-color: #2a2d30;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-}
-
-.card-description > p {
-    font-weight: 300;
-    padding: 0px 10px;
-}
-
-.card-description > h2, p {
-    padding-top: 7px;
-}
-
 h1 {
     margin-top: 120px;
-    text-align: center;
-}
-
-h1 > a {
-    text-decoration: none;
+    padding-left: 340px;
+    text-align: left;
     color: white;
 }
 
-h1 > a:hover {
-    color: #d3d3d3
+p {
+    color: white;
+    width: 600px;
+    padding-left: 130px;
+    font-size: 13pt;
+    line-height: 1.5;
 }
 
 #author {

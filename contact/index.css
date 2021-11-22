@@ -26,11 +26,6 @@ body {
     width: 30px;
 }
 
-img {
-    display: flex;
-    float: right;
-}
-
 #pages {
     margin: 9px 0px 0px 22px;
     position: absolute;
